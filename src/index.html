@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>腾讯周边商城</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!--header头部容器-->
+    <header></header>
+    <!--轮播图-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <a href="javascript:;" class="swiper-slide">
+                <img src="images/banner1.jpg">
+            </a>
+            <a href="javascript:;" class="swiper-slide">
+                <img src="images/banner2.jpg">
+            </a>
+            <a href="javascript:;" class="swiper-slide">
+                <img src="images/banner3.jpg">
+            </a>
+            <a href="javascript:;" class="swiper-slide">
+                <img src="images/banner4.jpg">
+            </a>
+        </div>
+        <!--分页器 -->
+        <div class="swiper-pagination"></div>
+        <!--前进后退按钮-->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </div>
+    <div class="mainContainer">
+        
+    <div class="content">
+        <div class="module">
+            <div class="title">
+                <h1>今日力荐</h1>
+                <span> 精挑细选，给你最好的礼物。</span>
+                <div class="more">
+                    <a href="javascript:;">更多</a>
+                    <i class="iconfont icon-wodeyishupin_"></i>
+                </div>
+            </div>
+            <div class="top">
+                <a href="javascript:;"><img src="images/ig.jpg"></a>
+            </div>
+
+            <!-- render部分 -->
+            <div class="bottom"></div>
+            <script type="text/html" id="moduleRender">
+                <ul>
+                    {{each list item}}
+                        <li data-id="{{item.id}}">
+                            <img src="{{item.img}}">
+                            <p>{{item.name}}</p>
+                            <p>￥{{item.price}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            </script>
+        </div>
+    </div>
+    </div>
+    <!--footer尾部容器-->
+    <footer></footer>
+    <script src="libs/require/require.min.js" data-main="js/index"></script>
+</body>
+</html>

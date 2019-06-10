@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聚豆折扣-列表</title>
+    <link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+    <header></header>
+    <div class="mainContainer">
+        <div class="list-title">
+            <span>首页></span>
+            <a href="javascript:;">聚豆折扣</a>
+        </div>
+        <div class="list-nav">
+            <!-- <dl class="list-nav-top">
+                <dt>分类：</dt>
+                <dd>全部</dd>
+                <dd>数码外设</dd>
+                <dd>家居日用</dd>
+                <dd>模型手办</dd>
+                <dd>个人定制</dd>
+            </dl> -->
+            <div class="list-nav-bottom">
+                <dl class="left-dl">
+                    <dt>排序：</dt>
+                    <dd>默认</dd>
+                    <dd>新品</dd>
+                    <dd>价格</dd>
+                    <dd>人气</dd>
+                    <dd>销量</dd>
+                </dl>
+                <dl class="right-dl">
+                    <dt>筛选：</dt>
+                    <dd>有货</dd>
+                    <dd>包邮</dd>
+                    <dd>聚豆可抵</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="content">
+            <div class="module">
+                <div class="bottom"></div>
+                <script type="text/html" id="moduleRender">
+                    <ul>
+                        {{each list item}}
+                            <li data-id="{{item.id}}">
+                                <img src="{{item.img}}">
+                                <p>{{item.name}}</p>
+                                <p>￥{{item.price}}</p>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </script>
+            </div>
+            <div class="btn">
+                <span>1</span>
+                <span>></span>
+                <span>&lt;</span>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="/libs/require/require.min.js" data-main="/js/list"></script>
+</body>
+</html>

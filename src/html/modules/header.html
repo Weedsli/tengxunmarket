@@ -1,0 +1,41 @@
+<div class="header-container">
+    <div class="header-top">
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png"></a>
+        </div>
+        <form class="search">
+            <i class="iconfont icon-search-b"></i><input class="searchInput" type="text" placeholder="请输入想要找的宝贝">
+        </form>
+        <ul class="searchlist"></ul>
+        <script type="text/html" id="searchRender">
+            {{each list item}}
+                <li>{{item}}</li>
+            {{/each}}
+        </script>
+        <div class="un-loginbox" id="unloginbox">
+            <i class="iconfont icon-icon-person"></i><a href="/html/login.html">立即登录</a>
+        </div>
+        <div class="un-loginbox" id="loginbox">
+            <i class="iconfont icon-icon-person"></i><a id="showname" href="javascript:;"></a>
+            <span id="loginout">退出</span>
+        </div>
+        
+        <div class="cart">
+            <i class="iconfont icon-cart"></i><a href="/html/cart.html">购物车</a><span id="calcCart">0</span>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="nav">
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="javascript:;">限时折扣</a></li>
+                <li><a href="/html/list.html">聚豆折扣</a></li>
+                <li><a href="javascript:;">定制专区</a></li>
+                <li><a href="javascript:;">聚发现</a></li>
+            </ul>
+        </div>
+        <div class="allClass">
+            <a href="javascript:;">全部商品分类</a><i class="iconfont icon-arrBottom"></i>
+        </div>
+    </div>
+</div>

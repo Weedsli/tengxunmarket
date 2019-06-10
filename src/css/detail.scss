@@ -1,0 +1,147 @@
+@import "modules/header.scss";
+@import "modules/base.scss";
+@import "modules/footer.scss";
+@import "../libs/font/iconfont.css";
+
+.mainContainer{
+    min-width: 1280px;
+    padding-bottom: 50px;
+    background-color: #f5f5f5;
+}
+.mainContainer .list-title{
+    max-width: 1260px;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.mainContainer .list-title a{
+    color: #777;
+}
+.mainContainer .content{
+    width: 1260px;
+    height: 620px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 50px;
+    
+}
+.mainContainer .content .content-left{
+    width: 458px;
+    float: left;
+}
+.mainContainer .content .content-left .mid-img a img{
+    width: 454px;
+    height: 438px;
+}
+.mainContainer .content .content-left .mid-img{
+    border: 2px solid #f2f2f2;
+    margin-bottom: 20px;
+}
+.mainContainer .content .content-left .sm-img ul{
+    display: flex;
+    justify-content: space-between;
+}
+.mainContainer .content .content-left .sm-img ul li{
+    border: 2px solid #f2f2f2;
+}
+.mainContainer .content .content-left .sm-img ul li:hover{
+    border: 2px solid red;
+}
+.mainContainer .content .content-left .sm-img ul li a img{
+    width: 74px;
+    height: 70px;
+}
+.mainContainer .content .content-right{
+    width: 670px;
+    height: 300px;
+    margin-left: 30px;
+    float: left;
+}
+.mainContainer .content .content-right h3{
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.mainContainer .content .content-right .price{
+    color: red;
+    font-size: 40px;
+}
+.mainContainer .content .content-right .detailbox,.mainContainer .content .content-right .detail-main{
+    height: 70px;
+    line-height: 70px;
+    font-size: 14px;
+    border-top:1px solid #f2f2f2;
+    
+}
+.mainContainer .content .content-right .detailbox span{
+    color: #777;
+    display: inline-block;
+    width: 300px;
+}
+
+.mainContainer .content .content-right .detail-main span{
+    color: #777;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: 2px solid #fff;
+}
+.mainContainer .content .content-right .detail-main i{
+    color: #777;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid red;
+    font-style: normal;
+    cursor: pointer;
+}
+.mainContainer .content .content-right .detail-main .numBtn{
+    display: inline-block;
+}
+.mainContainer .content .content-right .detail-main .numBtn a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    border: 1px solid #dad6a9;
+    vertical-align: middle;
+    line-height: 36px;
+    text-align: center;
+    font-size: 30px;
+} 
+.mainContainer .content .content-right .detail-main .numBtn input{
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    color: #000;
+    vertical-align: middle;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-top:1px solid #dad6a9;
+    border-bottom: 1px solid #dad6a9;
+
+}
+.mainContainer .content .content-right .detail-main-btn button{
+    width: 200px;
+    height: 56px;
+    background-color: red;
+    margin-right: 50px;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.mainContainer .content .content-right .detail-main-btn button:hover{
+    background-color:rgba(255, 0, 0, 0.8)
+}

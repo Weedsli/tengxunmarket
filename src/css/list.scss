@@ -1,0 +1,155 @@
+@import "modules/header.scss";
+@import "modules/base.scss";
+@import "modules/footer.scss";
+@import "../libs/font/iconfont.css";
+
+.mainContainer{
+    min-width: 1280px;
+    padding-bottom: 50px;
+    background-color: #f5f5f5;
+ 
+
+}
+.mainContainer .list-title{
+    max-width: 1260px;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.mainContainer .list-title a{
+    color: #777;
+}
+.mainContainer .list-nav{
+    background-color: #fff;
+    max-width: 1260px;
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.mainContainer .list-nav .list-nav-top{
+    width: 1158px;
+    height: 53px;
+    display: flex;
+    margin: 0 auto;
+    line-height: 53px;
+    margin-top: 20px;
+    border-bottom: 1px solid #cfcccc;
+
+}
+.mainContainer .list-nav .list-nav-top dt{
+    color: #cfcccc;
+}
+.mainContainer .list-nav .list-nav-top dd{
+    text-align: center;
+    margin-left: 20px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+.mainContainer .list-nav .list-nav-top dd:nth-child(2){
+    color: #222222;
+}
+.mainContainer .list-nav .list-nav-bottom{
+    width: 1158px;
+    height: 53px;
+    display: flex;
+    margin: 0 auto;
+    line-height: 53px;
+    justify-content: space-between;
+}
+.mainContainer .list-nav .list-nav-bottom .left-dl{
+    display: flex;
+    width: 430px;
+}
+
+.mainContainer .list-nav .list-nav-bottom .left-dl dt{
+    color: #cfcccc;
+}
+.mainContainer .list-nav .list-nav-bottom .left-dl dd{
+    text-align: center;
+    margin-left: 20px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+.mainContainer .list-nav .list-nav-bottom .left-dl dd:nth-child(2){
+    color: #222222;
+}
+.mainContainer .list-nav .list-nav-bottom .right-dl{
+    display: flex;
+    width: 335px;
+    justify-content: space-around;
+    color:#aaaaaa;
+}
+.mainContainer .list-nav .list-nav-bottom .right-dl dd{
+    cursor: pointer;
+}
+.mainContainer .list-nav .list-nav-bottom .right-dl dd:nth-child(2){
+    color: #222222;
+}
+.mainContainer .content{
+    background-color: #fff;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}   
+.mainContainer .content .module{
+    padding: 50px 50px 20px;
+}
+.mainContainer .content .module .top{
+    margin-top: 18px;
+    overflow: hidden;
+}
+.mainContainer .content .module .bottom ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.mainContainer .content .module .bottom ul li{
+    height: 356px;
+    border: 1px solid #eeeeee; ;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 8px;
+}
+.mainContainer .content .module .bottom ul li:hover{
+    margin-top:-5px; 
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5) ;
+    transition: 0.5s;
+}
+.mainContainer .content .module .bottom ul li img{
+    width: 280px;
+    height: 268px;
+}
+.mainContainer .content .module .bottom ul li p{
+    text-align: center;
+    line-height: 28px;
+}
+.mainContainer .content .btn{
+    height: 40px;
+    width: 1160px;
+    margin: 0 auto;
+    background: #fff;
+}
+.mainContainer .content .btn span{
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #f3bf19;
+    color: #fff;
+}
+.mainContainer .content .btn span:nth-child(2),.mainContainer .content .btn span:nth-child(3){
+    float: right;
+    background-color: #fff;
+    color: #000;
+}
+.mainContainer .content .btn span:hover{
+    border: 1px solid #f3bf19;
+}

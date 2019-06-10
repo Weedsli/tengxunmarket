@@ -1,0 +1,95 @@
+@import "modules/header.scss";
+@import "modules/base.scss";
+@import "modules/footer.scss";
+@import "../libs/font/iconfont.css";
+@import "../libs/swiper/css/swiper.min.css";
+.swiper-container{
+    min-height: 350px;
+    min-width: 1280px;
+}
+.swiper-container a{
+    height:100%;
+    width: 100%;
+}
+.swiper-container a img{
+    height: 100%;
+    width: 100%;
+}
+.swiper-pagination{
+    margin-bottom: 30px;
+}
+
+.mainContainer{
+    min-width: 1280px;
+    background-color: #f5f5f5;
+ 
+
+}
+.mainContainer .content{
+    background-color: #fff;
+    max-width: 1260px;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    top:-20px;
+    z-index: 2;
+}   
+.mainContainer .content .module{
+    height: 750px;
+    padding: 0 50px;
+    padding-top: 50px;
+
+}
+.mainContainer .content .module .title{
+    overflow: hidden;
+}
+.mainContainer .content .module .title h1{
+    float: left;
+    font-size: 28px;
+}
+.mainContainer .content .module .title span{
+    float: left;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-left:20px;
+}
+.mainContainer .content .module .title .more{
+    float: right;
+}
+.mainContainer .content .module .title .more i{
+    color: #ffc933;
+    font-size: 20px;
+}
+.mainContainer .content .module .title .more a{
+    color: #0e0e0f;
+    font-size: 18px;
+}
+.mainContainer .content .module .top{
+    margin-top: 18px;
+    overflow: hidden;
+}
+.mainContainer .content .module .bottom ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.mainContainer .content .module .bottom ul li{
+    height: 356px;
+    border: 1px solid #eeeeee; ;
+    cursor: pointer;
+}
+.mainContainer .content .module .bottom ul li:hover{
+    margin-top:-5px; 
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1) ;
+    transition: 0.5s;
+}
+.mainContainer .content .module .bottom ul li img{
+    width: 280px;
+    height: 268px;
+}
+.mainContainer .content .module .bottom ul li p{
+    text-align: center;
+    line-height: 28px;
+    margin-top:10px;
+}
