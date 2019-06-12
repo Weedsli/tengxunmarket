@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header></header>
+    <div class="mainwrap">
+        <div class="cart-title">
+            <p class="f1 sp-1"></p>
+            <p class="f1 sp-2"></p>
+            <p class="f1 sp-3">商品信息</p>
+            <p class="f1 sp-4"></p>
+            <p class="f1 sp-5">单价（元）</p>
+            <p class="f1 sp-6">数量</p>
+            <p class="f1 sp-7">金额（元）</p>
+            <p class="f1 sp-8">操作</p>
+        </div>
+        <div class="cart-list">
+            
+        </div>
+        <script type="text/html" id="cart-item">
+            {{each data item}}
+            <div class="cart-item" data-id="{{item.id}}" check-id={{item.checked}}>
+                <div class="f1 sp-1">
+                    <input type="checkbox" class="checkboxBtn">
+                </div>
+                <div class="f1 sp-2">
+                    <a href="javascript:;">
+                        <img src="{{item.images[0]}}" alt="">
+                    </a>
+                </div>
+                <div class="f1 sp-3">
+                    <p>{{item.name}}</p>
+                </div>
+                <div class="f1 sp-4">
+                    <p>套装：{{item.taozhuang}}</p>
+                </div>
+                <div class="f1 sp-5">
+                    <p><span class="price">{{item.price}}</span>元</p>
+                </div>
+                <div class="f1 sp-6">
+                    <div class="numBtn">
+                        <a class="Jan" href="javascript:;">-</a><input class="number" type="text" value="{{item.num}}"><a class="Jia" href="javascript:;">+</a>
+                    </div>
+                </div>
+                <div class="f1 sp-7">
+                    <p ><span class="xiaoji">{{(item.price*item.num).toFixed(2)}}</span>元</p>
+                </div>
+                <div class="f1 sp-8">
+                    <p class="delShop">删除</p>
+                </div>
+            </div>
+            {{/each}}
+        </script>
+            
+        <div class="cart-total">
+            <input type="checkbox" class="allcheckBtn">
+            <div class="cart-info">
+                <p>已选商品<b id="allNum">0</b>件&nbsp;总价：￥<b id="allPrice">0.00</b>元</p>
+                <div class="mycart-tb-btn">去结算</div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="/libs/require/require.min.js" data-main="/js/cart"></script>
+</body>
+</html>

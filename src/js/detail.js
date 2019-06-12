@@ -13,6 +13,7 @@ require(['config'],()=>{
                         $(".mainContainer").html(html);
                         this.zoom();
                         this.addCart();
+                        this.bindEvent();
                     }
                 })
             }
@@ -65,9 +66,10 @@ require(['config'],()=>{
                         // 这条商品已经加过购物车了
                         // 数量累加
                         cartList[i].num += num;
+                        cartList[i].checked=false;
                         } else {
                         // 这条商品还没有加过购物车
-                        cartList.push({...this.data,num});
+                        cartList.push({...this.data,num,checked:false});
                         }
                         // 逻辑处理完成以后把cartList重新存localStorage里，覆盖之前的
                         localStorage.setItem('cart', JSON.stringify(cartList));
@@ -79,11 +81,32 @@ require(['config'],()=>{
                         // arr[0] = this.detail
                         // let str = JSON.stringify(arr)
                         // localStorage.setItem('cart', str)
-                        this.data={...this.data,num};
+                        this.data={...this.data,num,checked:false};
                         localStorage.setItem('cart', JSON.stringify([this.data]));
                         // header.calcCart();
                     } 
                 })
+            }
+            bindEvent(){
+                this.addBtn = $("#Jia");
+                this.reduceBtn = $("#Jan");
+                if(typeof(this.number)){
+                    console.log(111)
+                }else{
+                    console.log(2)
+                }
+                this.addBtn.on("click",()=>{
+                    this.number = $("#number").val();
+                        $("#number").val(++this.number);                 
+                });
+                this.reduceBtn.on("click",()=>{
+                    this.number = $("#number").val();
+                    if(this.number<=1){  
+                        $("#number").val(1);
+                    }else{
+                        $("#number").val(--this.number); 
+                    }
+                 })
             }
         }
         new Detail();

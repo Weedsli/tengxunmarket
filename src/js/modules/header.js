@@ -29,8 +29,17 @@ define(['template','jquery','cookie'],(template)=>{
         }
         renderSearchList(list){//list是个数组
             let html=template("searchRender",{list:list});
-            console.log(html);
+            //console.log(html);
             $(".searchlist").html(html);
+            this.searchInput=$(".searchInput");
+            $(".searchlist").on("click",(e)=>{
+               // console.log($(e.target).html());
+               this.searchInput.val($(e.target).html());//val()里面是空 代表取值 有内容代表赋值
+               $(".searchlist").html('');
+            });
+            $("#searchBtn").on("click",()=>{
+                console.log(this.searchInput.val());
+            })
         }
         isLogin(){
             let username=$.cookie('username');
