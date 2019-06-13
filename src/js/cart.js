@@ -127,6 +127,23 @@ require(['config'],()=>{
                     localStorage.setItem('cart',JSON.stringify(data));
                     header.calcCart();
                 })
+                this.container.on("change",".number",function(){
+                    let num=$(this).val();
+                    let price=$(this).parents(".cart-item").find(".price").html();
+                    $(this).parents(".cart-item").find(".xiaoji").html((num*price).toFixed(2));
+                    _this.calcTotal();
+                    let data = JSON.parse(localStorage.getItem('cart'));
+                    let id = $(this).parents('.cart-item').attr('data-id');
+                    let index = -1;
+                    data.some((shop,i)=>{
+                        index = i ;
+                        return shop.id == id;
+                    })
+                    data[index].num = num;
+                    localStorage.setItem('cart',JSON.stringify(data));
+                    header.calcCart();
+                    _this.calcTotal();
+                })
                 this.container.on("click",".delShop",function(){
                     if(confirm("确认删除该商品吗？")){
                         let data=JSON.parse(localStorage.getItem('cart'));

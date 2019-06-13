@@ -3,6 +3,15 @@ header{
     min-width: 1280px;
     background-color:#0e0e0f;
 }
+.fix{
+    position: fixed;
+    z-index: 10;
+    top: -158px;
+    left: 0;
+    right: 0; 
+    transition: all 2s;//这句不要用js也可以
+
+}
 header .header-container{
     width: 1280px;
     margin: 0 auto;

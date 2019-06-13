@@ -6,7 +6,32 @@ define(['template','jquery','cookie'],(template)=>{
                this.search();
                this.isLogin();
                this.calcCart();
+               this.fixed();
             });
+        }
+        fixed(){
+            //let i=false;
+            $(window).on("scroll",()=>{
+               
+                // if(i===false && window.scrollY>158){
+                //     $("header").addClass("fix");
+                //     $(".fix").stop().animate({top:0},400,"linear",function(){
+                //          i=true;
+                //     });
+                // }
+                //    if(i===true && window.scrollY<158){
+                //     $(".fix").css("top","-158px");
+                //     i=false;
+                //     $("header").removeClass("fix");
+                // }
+                if(window.scrollY>158){
+                    $("header").addClass("fix").css("top","0");
+                }else{
+                    $("header").removeClass("fix").css("top","-158px");
+                }
+                
+                
+            })
         }
         load(){
             return new Promise(resolve=>{
@@ -67,7 +92,7 @@ define(['template','jquery','cookie'],(template)=>{
             if(cart){
                 cart=JSON.parse(cart);
                 num=cart.reduce((n,shop)=>{
-                    return n+shop.num;
+                    return n+Number(shop.num);
 
                 },0);
             }
