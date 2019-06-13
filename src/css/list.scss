@@ -2,6 +2,7 @@
 @import "modules/base.scss";
 @import "modules/footer.scss";
 @import "../libs/font/iconfont.css";
+@import "../libs/pagination.css";
 
 .mainContainer{
     min-width: 1280px;
@@ -152,4 +153,8 @@
 }
 .mainContainer .content .btn span:hover{
     border: 1px solid #f3bf19;
+}
+.mainContainer .content .M-box11{
+    width: 336px;
+    margin: 0 auto;
 }

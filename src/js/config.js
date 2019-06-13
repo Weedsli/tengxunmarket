@@ -9,7 +9,8 @@ require.config({
       url: 'js/modules/url',
       cookie:'libs/jquery-plugins/jquery.cookie',
       fly:'libs/jquery-plugins/jquery.fly.min',
-      zoom:'libs/jquery-plugins/jquery.elevateZoom-3.0.8.min'
+      zoom:'libs/jquery-plugins/jquery.elevateZoom-3.0.8.min',
+      pagination:'libs/jquery-plugins/jquery.pagination'
     },
     shim:{
       cookie:{
@@ -19,6 +20,9 @@ require.config({
         deps:['jquery']
       },
       fly:{
+        deps:['jquery']
+      },
+      pagination:{
         deps:['jquery']
       }
     }
